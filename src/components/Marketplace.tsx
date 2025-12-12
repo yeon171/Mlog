@@ -8,8 +8,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Plus, Search, ShoppingBag, TrendingUp, DollarSign } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { Plus, Search, ShoppingBag, TrendingUp, DollarSign } from 'lucide-react';import { toast } from 'sonner';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface MarketplaceItem {
@@ -252,14 +251,14 @@ export function Marketplace({ user, accessToken }: MarketplaceProps) {
                   className="cursor-pointer hover:shadow-lg transition-shadow"
                   onClick={() => setSelectedItem(item)}
                 >
-                  <div className="aspect-square bg-gradient-to-br from-pink-100 to-purple-100 relative overflow-hidden">
+                  <div className="relative overflow-hidden aspect-square bg-gradient-to-br from-pink-100 to-indigo-100">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <ShoppingBag className="w-16 h-16 text-purple-300" />
+                      <ShoppingBag className="w-16 h-16 text-indigo-300" />
                     </div>
                   </div>
                   <CardHeader>
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <Badge variant="secondary">{typeLabels[item.type]}</Badge>
+                      <Badge variant="outline">{typeLabels[item.type]}</Badge>
                       <Badge variant="outline">{conditionLabels[item.condition]}</Badge>
                     </div>
                     <CardTitle className="text-base line-clamp-2">{item.title}</CardTitle>
@@ -270,7 +269,7 @@ export function Marketplace({ user, accessToken }: MarketplaceProps) {
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between">
-                      <span className="text-purple-600">{item.price.toLocaleString()}원</span>
+                      <span className="font-semibold text-indigo-600">{item.price.toLocaleString()}원</span>
                       <span className="text-xs text-gray-500">{item.seller}</span>
                     </div>
                   </CardContent>
@@ -347,13 +346,13 @@ export function Marketplace({ user, accessToken }: MarketplaceProps) {
                 </p>
               </DialogHeader>
               <div className="space-y-6">
-                <div className="aspect-video bg-gradient-to-br from-pink-100 to-purple-100 rounded-lg flex items-center justify-center">
-                  <ShoppingBag className="w-24 h-24 text-purple-300" />
+                <div className="flex items-center justify-center rounded-lg aspect-video bg-gradient-to-br from-pink-100 to-indigo-100">
+                  <ShoppingBag className="w-24 h-24 text-indigo-300" />
                 </div>
                 
                 <div>
                   <Label>가격</Label>
-                  <p className="text-3xl text-purple-600 mt-1">
+                  <p className="mt-1 text-3xl font-bold text-indigo-600">
                     {selectedItem.price.toLocaleString()}원
                   </p>
                 </div>

@@ -17,7 +17,7 @@ export function Home({ user, onNavigate }: HomeProps) {
       title: '뮤지컬 아카이브', 
       description: '작품 정보, 캐스팅, OST 탐색',
       icon: Film,
-      color: 'bg-purple-50 text-purple-600'
+      color: 'bg-indigo-50 text-indigo-600'
     },
     { 
       id: 'actors' as NavigationSection, 
@@ -105,7 +105,7 @@ export function Home({ user, onNavigate }: HomeProps) {
       {/* Quick Links */}
       <div className="mb-12">
         <div className="flex items-center gap-2 mb-6">
-          <TrendingUp className="w-6 h-6 text-purple-600" />
+          <TrendingUp className="w-6 h-6 text-indigo-600" />
           <h2>인기 메뉴</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -140,7 +140,7 @@ export function Home({ user, onNavigate }: HomeProps) {
               <button
                 key={feature.section}
                 onClick={() => onNavigate(feature.section)}
-                className="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all text-left"
+                className="flex items-center gap-4 p-4 text-left bg-white border border-gray-200 rounded-lg hover:border-indigo-300 hover:shadow-md transition-all"
               >
                 <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
                   <Icon className="w-5 h-5 text-gray-600" />

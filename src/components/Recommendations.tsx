@@ -146,7 +146,7 @@ export function Recommendations({ user, accessToken }: RecommendationsProps) {
       {/* Recommendations Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {recommendations[selectedCategory].map((rec) => (
-          <Card key={rec.id} className="hover:shadow-lg transition-shadow">
+          <Card key={rec.id} className="transition-shadow hover:shadow-lg">
             <div className="aspect-[2/3] bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 relative overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1765278248936-f6b4eab6474d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpY2FsJTIwcGVyZm9ybWVyJTIwc2luZ2luZ3xlbnwxfHx8fDE3NjU1MTQ2MzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -166,7 +166,7 @@ export function Recommendations({ user, accessToken }: RecommendationsProps) {
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-sm text-gray-700 flex items-start gap-2">
-                <Sparkles className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                <Sparkles className="w-4 h-4 text-indigo-500 mt-0.5 flex-shrink-0" />
                 <span>{rec.reason}</span>
               </p>
               <div className="flex flex-wrap gap-2">
@@ -184,7 +184,7 @@ export function Recommendations({ user, accessToken }: RecommendationsProps) {
 
       {/* Preference Quiz Card */}
       {!user && (
-        <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200">
+        <Card className="bg-gradient-to-r from-indigo-50 to-pink-50 border-indigo-200">
           <CardHeader>
             <CardTitle>🎯 더 정확한 추천을 받고 싶으신가요?</CardTitle>
           </CardHeader>
@@ -203,8 +203,8 @@ export function Recommendations({ user, accessToken }: RecommendationsProps) {
           <Card>
             <CardHeader>
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-purple-100 rounded-lg">
-                  <Music className="w-6 h-6 text-purple-600" />
+                <div className="p-3 bg-indigo-100 rounded-lg">
+                  <Music className="w-6 h-6 text-indigo-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">선호 장르</p>

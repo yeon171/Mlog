@@ -9,8 +9,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Plus, Search, Eye, Star, MapPin, Upload } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { Plus, Search, Eye, Star, MapPin, Upload } from 'lucide-react';import { toast } from 'sonner';
 
 interface SeatViewData {
   id: string;
@@ -247,7 +246,7 @@ export function SeatView({ user, accessToken }: SeatViewProps) {
                 </div>
                 <div className="space-y-2">
                   <Label>좌석 사진 업로드</Label>
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-purple-300 transition-colors cursor-pointer">
+                  <div className="p-8 text-center border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-indigo-300 transition-colors">
                     <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                     <p className="text-sm text-gray-600">사진을 드래그하거나 클릭하여 업로드</p>
                   </div>
@@ -273,7 +272,7 @@ export function SeatView({ user, accessToken }: SeatViewProps) {
         <TabsContent value="venues" className="mt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {venues.map((venue) => (
-              <Card key={venue.id} className="cursor-pointer hover:shadow-lg transition-shadow">
+              <Card key={venue.id} className="transition-shadow cursor-pointer hover:shadow-lg">
                 <div className="aspect-video bg-gradient-to-br from-purple-100 to-blue-100 relative overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1760170437237-a3654545ab4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVhdGVyJTIwc2VhdHMlMjBhdWRpZW5jZXxlbnwxfHx8fDE3NjU0NDAxMDl8MA&ixlib=rb-4.1.0&q=80&w=1080"

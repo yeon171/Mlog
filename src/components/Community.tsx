@@ -10,8 +10,7 @@ import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Plus, MessageSquare, ThumbsUp, Eye, EyeOff, AlertCircle } from 'lucide-react';
-import { Switch } from './ui/switch';
-import { toast } from 'sonner@2.0.3';
+import { Switch } from './ui/switch';import { toast } from 'sonner';
 
 interface Review {
   id: string;
@@ -202,7 +201,7 @@ export function Community({ user, accessToken }: CommunityProps) {
                   </div>
                   <Switch
                     checked={formData.hasSpoiler}
-                    onCheckedChange={(checked) => setFormData({ ...formData, hasSpoiler: checked })}
+                    onCheckedChange={(checked: boolean) => setFormData({ ...formData, hasSpoiler: checked })}
                   />
                 </div>
                 <div className="flex gap-2">
@@ -232,7 +231,7 @@ export function Community({ user, accessToken }: CommunityProps) {
         <Switch checked={showSpoilers} onCheckedChange={setShowSpoilers} />
       </div>
 
-      <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as any)}>
+      <Tabs value={activeTab} onValueChange={(v: string) => setActiveTab(v as any)}>
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="musical">작품 후기</TabsTrigger>
           <TabsTrigger value="actor">배우 후기</TabsTrigger>
@@ -278,8 +277,8 @@ export function Community({ user, accessToken }: CommunityProps) {
                     <p className="text-gray-700 line-clamp-3 mb-4">{review.content}</p>
                     <div className="flex items-center justify-between text-sm text-gray-500">
                       <span>by {review.userName} · {new Date(review.createdAt).toLocaleDateString()}</span>
-                      <div className="flex items-center gap-4">
-                        <button className="flex items-center gap-1 hover:text-purple-600">
+                      <div className="flex items-center gap-4 ">
+                        <button className="flex items-center gap-1 hover:text-indigo-600">
                           <ThumbsUp className="w-4 h-4" />
                           <span>{review.likes}</span>
                         </button>

@@ -8,8 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
-import { Plus, Film, Calendar, BarChart3, Heart, LogOut, Trophy } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { Plus, Film, Calendar, BarChart3, Heart, LogOut, Trophy } from 'lucide-react';import { toast } from 'sonner';
 
 interface WatchedMusical {
   id: string;
@@ -140,8 +139,8 @@ export function UserProfile({ user, accessToken, onSignOut }: UserProfileProps) 
       {/* Profile Header */}
       <div className="mb-8">
         <div className="flex items-start justify-between">
-          <div className="flex items-center gap-6">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-white flex items-center justify-center text-3xl">
+          <div className="flex items-center gap-6 ">
+            <div className="flex items-center justify-center w-24 h-24 text-3xl text-white rounded-full bg-gradient-to-br from-indigo-500 to-pink-500">
               {user.name?.[0] || user.email[0].toUpperCase()}
             </div>
             <div>
@@ -171,9 +170,9 @@ export function UserProfile({ user, accessToken, onSignOut }: UserProfileProps) 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Card>
           <CardHeader>
-            <div className="flex items-center gap-3">
-              <div className="p-3 bg-purple-100 rounded-lg">
-                <Film className="w-6 h-6 text-purple-600" />
+            <div className="flex items-center gap-3 ">
+              <div className="p-3 rounded-lg bg-indigo-100">
+                <Film className="w-6 h-6 text-indigo-600" />
               </div>
               <div>
                 <p className="text-sm text-gray-600">총 관람 횟수</p>
@@ -391,7 +390,7 @@ export function UserProfile({ user, accessToken, onSignOut }: UserProfileProps) 
                           key={musical.id}
                           className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
                         >
-                          <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center flex-shrink-0">
+                          <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 text-white bg-indigo-600 rounded-full">
                             {index + 1}
                           </div>
                           <div className="flex-1">

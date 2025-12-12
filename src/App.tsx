@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { createClient } from '@supabase/supabase-js@2.39.3';
+import { createClient } from '@supabase/supabase-js';
 import { projectId, publicAnonKey } from './utils/supabase/info';
-import { Toaster, toast } from 'sonner@2.0.3';
+import { Toaster, toast } from 'sonner';
 import { Home } from './components/Home';
 import { MusicalArchive } from './components/MusicalArchive';
 import { ActorDatabase } from './components/ActorDatabase';

@@ -38,11 +38,11 @@ export function Sidebar({
     >
       <div className="p-4 border-b border-gray-200 flex items-center justify-between">
         {!collapsed && (
-          <h1 className="text-purple-600">🎭 뮤지컬 플랫폼</h1>
+          <h1 className="text-indigo-600">Mlog</h1>
         )}
         <button
           onClick={onToggleCollapse}
-          className="p-1 hover:bg-gray-100 rounded-md"
+          className="p-1 rounded-md hover:bg-gray-100"
         >
           {collapsed ? (
             <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -64,7 +64,7 @@ export function Sidebar({
               className={cn(
                 'w-full flex items-center gap-3 px-4 py-3 transition-colors',
                 isActive
-                  ? 'bg-purple-50 text-purple-600 border-r-4 border-purple-600'
+                  ? 'bg-indigo-50 text-indigo-600 border-r-4 border-indigo-600'
                   : 'text-gray-700 hover:bg-gray-50',
                 collapsed && 'justify-center px-2'
               )}
@@ -78,8 +78,8 @@ export function Sidebar({
 
       <div className="p-4 border-t border-gray-200">
         {user ? (
-          <div className={cn('flex items-center gap-3', collapsed && 'justify-center')}>
-            <div className="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center">
+          <div className={cn('flex items-center gap-3', collapsed && 'justify-center')} title={user.name || user.email}>
+            <div className="flex items-center justify-center w-8 h-8 text-white bg-indigo-600 rounded-full">
               {user.name?.[0] || user.email[0].toUpperCase()}
             </div>
             {!collapsed && (

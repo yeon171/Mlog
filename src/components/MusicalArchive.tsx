@@ -9,8 +9,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Plus, Search, Film, Music, Users as UsersIcon, Calendar, ExternalLink } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { Plus, Search, Film, Music, Users as UsersIcon, Calendar, ExternalLink } from 'lucide-react';import { toast } from 'sonner';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface Musical {
@@ -253,16 +252,16 @@ export function MusicalArchive({ user, accessToken }: MusicalArchiveProps) {
               className="cursor-pointer hover:shadow-lg transition-shadow"
               onClick={() => setSelectedMusical(musical)}
             >
-              <div className="aspect-[2/3] bg-gradient-to-br from-purple-100 to-blue-100 relative overflow-hidden">
+              <div className="relative overflow-hidden aspect-[2/3] bg-gradient-to-br from-indigo-100 to-blue-100">
                 {musical.poster ? (
                   <ImageWithFallback
                     src={musical.poster}
                     alt={musical.title}
-                    className="w-full h-full object-cover"
+                    className="object-cover w-full h-full"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Film className="w-16 h-16 text-purple-300" />
+                    <Film className="w-16 h-16 text-indigo-300" />
                   </div>
                 )}
               </div>

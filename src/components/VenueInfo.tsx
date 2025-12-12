@@ -102,8 +102,8 @@ export function VenueInfo({ user }: VenueInfoProps) {
             <Card
               key={venue.id}
               className={`cursor-pointer transition-all ${
-                selectedVenue?.id === venue.id
-                  ? 'border-purple-600 shadow-lg'
+                selectedVenue?.id === venue.id ?
+                  'border-indigo-600 shadow-lg'
                   : 'hover:shadow-md'
               }`}
               onClick={() => setSelectedVenue(venue)}
@@ -232,9 +232,9 @@ export function VenueInfo({ user }: VenueInfoProps) {
                       <h3>좌석 선택 팁</h3>
                     </div>
                     <div className="space-y-3">
-                      {selectedVenue.seatTips.map((tip, index) => (
-                        <div key={index} className="flex items-start gap-3 p-4 bg-purple-50 border border-purple-100 rounded-lg">
-                          <div className="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center flex-shrink-0 text-sm">
+                      {selectedVenue.seatTips.map((tip, index) => ( <
+                        div key = { index } className = "flex items-start gap-3 p-4 rounded-lg bg-indigo-50 border border-indigo-100" >
+                          <div className="flex items-center justify-center flex-shrink-0 w-6 h-6 text-sm text-white bg-indigo-600 rounded-full">
                             {index + 1}
                           </div>
                           <p className="text-gray-700">{tip}</p>

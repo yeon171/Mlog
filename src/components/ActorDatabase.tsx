@@ -8,8 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
-import { Plus, Search, Users, Instagram, Twitter, Bell, BellOff } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { Plus, Search, Users, Instagram, Twitter, Bell, BellOff } from 'lucide-react';import { toast } from 'sonner';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface Actor {
@@ -278,10 +277,10 @@ export function ActorDatabase({ user, accessToken }: ActorDatabaseProps) {
                         e.stopPropagation();
                         toggleFollow(actor.id);
                       }}
-                      className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-2 rounded-full transition-colors hover:bg-gray-100"
                     >
                       {following.has(actor.id) ? (
-                        <Bell className="w-5 h-5 text-purple-600" />
+                      <Bell className="w-5 h-5 text-indigo-600" />
                       ) : (
                         <BellOff className="w-5 h-5 text-gray-400" />
                       )}
@@ -339,7 +338,7 @@ export function ActorDatabase({ user, accessToken }: ActorDatabaseProps) {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-6">
-                  <div className="w-32 h-32 rounded-lg bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-32 h-32 rounded-lg bg-gradient-to-br from-blue-100 to-indigo-100">
                     {selectedActor.photo ? (
                       <ImageWithFallback
                         src={selectedActor.photo}

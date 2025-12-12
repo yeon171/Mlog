@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Label } from './ui/label';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface Performance {
   id: string;
@@ -254,7 +254,7 @@ export function ScheduleCalendar({ user, accessToken }: ScheduleCalendarProps) {
               return (
                 <div
                   key={day}
-                  className={`aspect-square border rounded-lg p-2 hover:bg-gray-50 cursor-pointer transition-colors ${
+                  className={`p-2 border rounded-lg cursor-pointer aspect-square hover:bg-gray-50 transition-colors ${
                     isToday ? 'border-purple-600 bg-purple-50' : 'border-gray-200'
                   }`}
                   onClick={() => {
@@ -262,7 +262,7 @@ export function ScheduleCalendar({ user, accessToken }: ScheduleCalendarProps) {
                     setSelectedDate(dateStr);
                   }}
                 >
-                  <div className={`text-sm mb-1 ${isToday ? 'text-purple-600' : 'text-gray-900'}`}>
+                  <div className={`mb-1 text-sm ${isToday ? 'text-indigo-600' : 'text-gray-900'}`}>
                     {day}
                   </div>
                   {dayPerformances.length > 0 && (
@@ -270,7 +270,7 @@ export function ScheduleCalendar({ user, accessToken }: ScheduleCalendarProps) {
                       {dayPerformances.slice(0, 2).map((perf) => (
                         <div
                           key={perf.id}
-                          className="text-xs bg-purple-100 text-purple-700 px-1 py-0.5 rounded truncate"
+                          className="px-1 py-0.5 text-xs rounded truncate bg-indigo-100 text-indigo-700"
                         >
                           {perf.musicalTitle}
                         </div>
