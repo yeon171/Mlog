@@ -1,6 +1,7 @@
 import React from 'react';
 import { User, NavigationSection } from '../App';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
+import bannerImage from '../assets/img/test_Banner.png';
 import { Button } from './ui/button';
 import { Film, Users, Calendar, Eye, MessageSquare, ShoppingBag, Newspaper, TrendingUp, Star, ThumbsUp, Sparkles, Ticket } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -33,8 +34,8 @@ export function Home({ user, onNavigate }: HomeProps) {
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="relative rounded-xl overflow-hidden h-60 md:h-80 flex items-center justify-center">
-        <ImageWithFallback 
-          src="https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1920" 
+        <ImageWithFallback
+          src={bannerImage} // 배너 이미지 경로를 변경했습니다.
           alt="Hero background" 
           className="absolute inset-0 w-full h-full object-cover"
         />
