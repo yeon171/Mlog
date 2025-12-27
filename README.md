@@ -1,6 +1,9 @@
 # Musicalog
 
-[한국어](#-한국어) | [English](#-english)
+<p>
+  <a href="#한국어">한국어</a> |
+  <a href="#english">English</a>
+</p>
 
 ---
 
@@ -14,9 +17,9 @@
 ---
 
 ### 프로젝트 개요
-- 프로젝트 유형: 개인 프로젝트
-- 개발 목적: 흩어져 있는 뮤지컬 정보와 배우 스케줄을 한 곳에서 관리
-- 진행 상태: 기획 및 초기 개발 단계
+- **프로젝트 유형**: 개인 프로젝트
+- **개발 목적**: 흩어져 있는 뮤지컬 정보와 배우 스케줄을 한 곳에서 관리
+- **진행 상태**: 기획 및 초기 개발 단계
 
 ---
 
@@ -27,8 +30,8 @@
 - 좋아하는 배우의 출연작과 스케줄을 직접 정리해야 함
 - 배우 데뷔일, 공연 n주년과 같은 기념일을 놓치기 쉬움
 
-Musicalog는  
-공연, 배우, 개인 관심 정보를 하나의 서비스로 통합하는 것을 목표로 합니다.
+**Musicalog**는  
+공연 · 배우 · 개인 관심 정보를 하나의 서비스로 통합하는 것을 목표로 합니다.
 
 ---
 
@@ -38,6 +41,8 @@ Musicalog는
 - 사용자 인증 (Supabase Auth)
 - 뮤지컬 공연 정보 조회
 - 배우 정보 조회
+
+#### 예정 기능
 - 관심 배우 찜하기
 - 찜한 배우의 공연 일정 캘린더 표시
 - 배우 데뷔일 / 공연 n주년 자동 계산
@@ -46,28 +51,27 @@ Musicalog는
 ---
 
 ### 데이터베이스 설계
-- users: 사용자 정보
-- actors: 배우 정보
-- musicals: 공연 정보
-- schedules: 공연 일정
-- favorites: 사용자-배우 찜 관계
-- calendars: 개인 캘린더 이벤트
+- **users**: 사용자 정보
+- **actors**: 배우 정보
+- **musicals**: 공연 정보
+- **schedules**: 공연 일정
+- **favorites**: 사용자-배우 찜 관계
+- **calendars**: 개인 캘린더 이벤트
 
 ---
 
 ### 기술 스택
 
-Frontend
+**Frontend**
 - Next.js
 - TypeScript
 - Tailwind CSS
 
-Backend
+**Backend**
 - Supabase (PostgreSQL)
 - Supabase Auth
-- Java / Spring Boot (예정)
 
-Deployment
+**Deployment**
 - Vercel (예정)
 
 ---
@@ -76,3 +80,80 @@ Deployment
 ```bash
 npm install
 npm run dev
+```
+
+---
+---
+
+## English
+
+### Project Introduction
+A web service for musical fans that integrates musical and actor information,  
+allowing users to track favorite actors, performance schedules,  
+and important anniversaries through a personalized calendar.
+
+---
+
+### Project Overview
+- **Project Type**: Personal Project
+- **Purpose**: To centralize scattered musical information and actor schedules
+- **Status**: Planning and initial development phase
+
+---
+
+### Motivation
+As a musical fan, I often found it inconvenient that:
+- Performance and actor information is spread across multiple websites.
+- I had to manually organize the schedules and filmography of my favorite actors.
+- It was easy to miss important anniversaries like an actor's debut or a show's milestone.
+
+**Musicalog** aims to solve these issues by integrating performance, actor, and personal interest data into a single, unified service.
+
+---
+
+### Key Features
+
+#### Implemented / In Progress
+- User Authentication (Supabase Auth)
+- View Musical Performance Information
+- View Actor Information
+
+#### Planned Features
+- "Favorite" an actor
+- Display favorited actors' performance schedules on a calendar
+- Automatically calculate actor debut dates and performance anniversaries
+- Personalized notification features
+
+---
+
+### Database Schema
+- **users**: User information
+- **actors**: Actor information
+- **musicals**: Musical performance information
+- **schedules**: Performance schedules
+- **favorites**: User-actor "favorite" relationships
+- **calendars**: Personal calendar events
+
+---
+
+### Tech Stack
+
+**Frontend**
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+**Backend**
+- Supabase (PostgreSQL)
+- Supabase Auth
+
+**Deployment**
+- Vercel (Planned)
+
+---
+
+### Getting Started
+```bash
+npm install
+npm run dev
+```
