@@ -1,4 +1,4 @@
-# Musicalog
+# MLog
 
 <p>
   <a href="#한국어">한국어</a> |
