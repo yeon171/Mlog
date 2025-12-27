@@ -70,6 +70,7 @@
 **Backend**
 - Supabase (PostgreSQL)
 - Supabase Auth
+- Java / Spring Boot (예정)
 
 **Deployment**
 - Vercel (예정)
@@ -146,6 +147,7 @@ As a musical fan, I often found it inconvenient that:
 **Backend**
 - Supabase (PostgreSQL)
 - Supabase Auth
+- Java / Spring Boot (planned)
 
 **Deployment**
 - Vercel (Planned)
