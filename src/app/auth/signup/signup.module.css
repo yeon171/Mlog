@@ -1,0 +1,62 @@
+.card {
+  width: 100%;
+  max-width: 28rem; /* max-w-md */
+}
+
+.headerSpace {
+  margin-bottom: 0.25rem;
+}
+.headerSpace > * + * {
+  margin-top: 0.25rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.contentSpace {
+  margin-bottom: 1rem;
+}
+.contentSpace > * + * {
+  margin-top: 1rem;
+}
+
+.inputGroup {
+  margin-bottom: 0.5rem;
+}
+.inputGroup > * + * {
+  margin-top: 0.5rem;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+.footerSpace {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.footerSpace > * + * {
+  margin-top: 1rem;
+}
+
+.loginContainer {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.loginLink {
+  font-weight: 500;
+  color: hsl(var(--primary));
+}
+.loginLink:hover {
+  text-decoration: underline;
+}

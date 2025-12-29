@@ -1,0 +1,120 @@
+.card {
+  width: 100%;
+  max-width: 28rem; /* max-w-md */
+}
+
+.headerSpace {
+  margin-bottom: 0.25rem; /* space-y-1 equivalent for children */
+}
+.headerSpace > * + * {
+  margin-top: 0.25rem;
+}
+
+.title {
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem;
+  font-weight: 700; /* font-bold */
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.contentSpace {
+  margin-bottom: 1rem; /* space-y-4 equivalent */
+}
+.contentSpace > * + * {
+  margin-top: 1rem;
+}
+
+.inputGroup {
+  margin-bottom: 0.5rem; /* space-y-2 equivalent */
+}
+.inputGroup > * + * {
+  margin-top: 0.5rem;
+}
+
+.passwordHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forgotPassword {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: hsl(var(--primary));
+}
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+.footerSpace {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* space-y-4 equivalent */
+}
+.footerSpace > * + * {
+  margin-top: 1rem;
+}
+
+.dividerContainer {
+  position: relative;
+  width: 100%;
+}
+
+.dividerLineContainer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.dividerLine {
+  width: 100%;
+  border-top-width: 1px;
+}
+
+.dividerTextContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem; /* text-xs */
+  text-transform: uppercase;
+}
+
+.dividerText {
+  background-color: hsl(var(--background));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.socialButton {
+  width: 100%;
+}
+
+.signupContainer {
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+}
+
+.signupLink {
+  font-weight: 500; /* font-medium */
+  color: hsl(var(--primary));
+}
+.signupLink:hover {
+  text-decoration: underline;
+}

@@ -29,9 +29,11 @@ export default function Header() {
           />
         </div>
 
-        <Button variant="outline" size="sm">
-          로그인
-        </Button>
+        <Link href="/auth/login">
+          <Button variant="outline" size="sm">
+            로그인
+          </Button>
+        </Link>
       </div>
     </header>
   )
