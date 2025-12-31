@@ -38,7 +38,7 @@
 ### 핵심 기능
 
 #### 구현 / 개발 중
-- 사용자 인증 (Supabase Auth)
+- 사용자 인증
 - 뮤지컬 공연 정보 조회
 - 배우 정보 조회
 - 관심 배우 찜하기
@@ -66,9 +66,7 @@
 - Tailwind CSS
 
 **Backend**
-- Supabase (PostgreSQL)
-- Supabase Auth
-- Java / Spring Boot (예정)
+- Java / Spring Boot
 
 **Deployment**
 - Vercel (예정)
@@ -113,7 +111,7 @@ As a musical fan, I often found it inconvenient that:
 ### Key Features
 
 #### Implemented / In Progress
-- User Authentication (Supabase Auth)
+- User Authentication
 - View Musical Performance Information
 - View Actor Information
 - "Favorite" an actor
@@ -141,9 +139,7 @@ As a musical fan, I often found it inconvenient that:
 - Tailwind CSS
 
 **Backend**
-- Supabase (PostgreSQL)
-- Supabase Auth
-- Java / Spring Boot (planned)
+- Java / Spring Boot
 
 **Deployment**
 - Vercel (Planned)

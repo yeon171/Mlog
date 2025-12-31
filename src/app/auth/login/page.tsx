@@ -1,16 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
 import styles from './login.module.css'
+import { useAuth } from '@/context/AuthContext'
 
 export default function LoginPage() {
-  const router = useRouter()
+  const { login } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -22,7 +22,6 @@ export default function LoginPage() {
     setError(null)
 
     try {
-      // 프록시 설정을 통해 /api로 요청을 보내면 백엔드(localhost:8080)로 전달됨
       const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
@@ -38,12 +37,8 @@ export default function LoginPage() {
 
       const data = await response.json()
 
-      // 로그인 성공 시 토큰 저장
-      localStorage.setItem('accessToken', data.token)
-      localStorage.setItem('user', JSON.stringify(data.user))
-
-      router.push('/')
-      router.refresh()
+      // AuthContext의 login 함수 호출
+      login(data.user, data.token)
 
     } catch (err: any) {
       console.error('Login error:', err)

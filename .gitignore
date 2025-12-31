@@ -35,6 +35,11 @@ next-env.d.ts
 
 # supabase
 KC8Gl2dG5cGA3BMF
+http://localhost:8080/h2-console
+jdbc:h2:file:./data/mlogdb
+
 
 # Color
 #cfd7fb
+
+data/mlogdb.mv.db
