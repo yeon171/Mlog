@@ -1,0 +1,87 @@
+.pageContainer {
+  @apply container mx-auto py-10 px-4;
+}
+
+.header {
+  @apply text-center mb-12;
+}
+
+.title {
+  @apply text-4xl font-bold;
+}
+
+.subtitle {
+  @apply text-lg text-muted-foreground mt-2;
+}
+
+.searchContainer {
+  @apply mb-12;
+}
+
+.searchInput {
+  @apply max-w-2xl mx-auto;
+}
+
+.main {
+  @apply space-y-16;
+}
+
+.sectionTitle {
+  @apply text-3xl font-semibold mb-6;
+}
+
+.listContainer {
+  @apply flex gap-4 overflow-x-auto pb-4;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.listContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.emptyState {
+  @apply h-48 bg-gray-100 rounded-lg flex items-center justify-center;
+}
+
+.emptyText {
+  @apply text-gray-500;
+}
+
+.cardLink {
+  @apply block w-48 flex-shrink-0;
+}
+
+.cardImageContainer {
+  @apply aspect-[2/3] bg-gray-200 rounded-lg mb-2 overflow-hidden shadow-md transition-shadow duration-300;
+}
+
+.cardLink:hover .cardImageContainer {
+  @apply shadow-xl;
+}
+
+.cardImage {
+  @apply w-full h-full object-cover transition-transform duration-300;
+}
+
+.cardLink:hover .cardImage {
+  @apply scale-105;
+}
+
+.cardTitle {
+  @apply font-semibold truncate transition-colors;
+}
+
+.cardLink:hover .cardTitle {
+  @apply text-primary;
+}
+
+.cardDate {
+  @apply text-sm text-muted-foreground;
+}
+
+.discountBadge {
+  @apply text-sm font-bold text-red-600;
+}

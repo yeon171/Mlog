@@ -13,7 +13,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 type View = 'main' | 'password' | 'delete'
 
-export default function MyPage() {
+export default function MyPageClient() {
   const router = useRouter()
   const { user, logout: authLogout, loading: authLoading, fetchUser } = useAuth()
   const [view, setView] = useState<View>('main')

@@ -75,13 +75,34 @@ app.post("/make-server-2b6147e6/auth/signup", async (c) => {
 // Get all musicals
 app.get("/make-server-2b6147e6/musicals", async (c) => {
   try {
-    const musicals = await kv.getByPrefix('musical:');
+    // 원본 데이터 (id, title만 있을 수 있음)
+    const originalMusicals = await kv.getByPrefix('musical:');
+
+    // 더미 데이터로 필드 확장
+    const musicals = originalMusicals.map((musical: any, index: number) => {
+      const today = new Date();
+      const startDate = new Date(today);
+      startDate.setDate(today.getDate() - (index * 10)); // 과거부터 시작
+
+      const endDate = new Date(startDate);
+      endDate.setDate(startDate.getDate() + 60); // 60일 동안 공연
+
+      return {
+        ...musical,
+        posterUrl: `https://picsum.photos/seed/${musical.id}/400/600`, // 임시 포스터
+        startDate: startDate.toISOString().split('T')[0], // YYYY-MM-DD
+        endDate: endDate.toISOString().split('T')[0],     // YYYY-MM-DD
+        discountRate: index % 3 === 0 ? 15 : null, // 3개 중 1개는 15% 할인
+      };
+    });
+
     return c.json({ musicals });
   } catch (error) {
     console.error('Error fetching musicals:', error);
     return c.json({ error: 'Failed to fetch musicals' }, 500);
   }
 });
+
 
 // Get a specific musical
 app.get("/make-server-2b6147e6/musicals/:id", async (c) => {
@@ -450,4 +471,4 @@ app.get("/make-server-2b6147e6/image/:path", async (c) => {
   }
 });
 
-Deno.serve(app.fetch);
+Deno.serve({ port: 54321 }, app.fetch);

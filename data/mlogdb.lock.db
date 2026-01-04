@@ -1,6 +1,6 @@
 #FileLock
-#Wed Dec 31 18:45:18 KST 2025
-server=192.168.0.16\:57090
+#Sun Jan 04 13:41:37 KST 2026
+server=192.168.0.16\:52525
 hostName=dus
 method=file
-id=19b73cc2ae6ff7b283285362aa0979af4a43228c8d5
+id=19b874f9027e98256a45e0de2f4025c49965c0636a0
